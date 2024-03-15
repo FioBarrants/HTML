@@ -1,33 +1,86 @@
-document.querySelector('#header').innerHTML = "Estoy leyendo el documento switch"
-var fruta
+document.querySelector('#header').innerHTML = "Dia invalido"
+var dia
 var mensaje 
-var userInput =prompt("Ingrese el sabor de su fruta: ")
+var userInput =prompt("Ingrese el dia: ")
 
-function jugo_de_fresas() {
+function dia_lunes() {
+  mensaje = "Hoy es el dia lunes"
+
+    document.querySelector('#header').innerHTML = mensaje
+    
+  }
+
+  function dia_martes() {
+    mensaje = "Hoy es el dia martes"
     document.querySelector('#header').innerHTML = mensaje
   }
 
-  function jugo_de_naranja() {
-    mensaje = "Batir naranjas y mandarinas"
+  function dia_miercoles() {
+  mensaje = "Hoy es el dia miercoles"
     document.querySelector('#header').innerHTML = mensaje
   }
 
-  function servir_vaso_de_agua() {
-  mensaje = "servir vaso con agua"
+  function dia_jueves() {
+    mensaje = "Hoy es el dia jueves"
     document.querySelector('#header').innerHTML = mensaje
   }
 
-fruta = userInput.toLowerCase()
-switch(fruta){
-    case "fresa":
-        mensaje = "Batir fresas"
-        jugo_de_fresas()
+  function dia_viernes() {
+  mensaje = "Hoy es el dia viernes"
+    document.querySelector('#header').innerHTML = mensaje
+  }
+
+  function dia_sabado() {
+    mensaje = "Hoy es el dia sabado"
+    document.querySelector('#header').innerHTML = mensaje
+  }
+
+  function dia_domingo() {
+  mensaje = "Hoy es el dia domingo"
+    document.querySelector('#header').innerHTML = mensaje
+  }
+
+
+dia = parseInt(userInput)
+switch(dia){
+
+    case 1:
+       
+        dia_lunes()
     break
-    case "naranja":
-    case "mandarina":
-        jugo_de_naranja()
+
+    case 2:
+    
+        dia_martes()
     break
+
+    case 3:
+       
+        dia_miercoles()
+    break
+
+    case 4:
+   
+      dia_jueves()
+  break
+
+    case 5:
+  
+    dia_viernes()
+  break
+
+  case 6:
+    
+    dia_sabado()
+break
+
+  case 7:
+   
+    dia_domingo()
+  break
+
     default: 
-        servir_vaso_de_agua()
+    mensaje = "Dia invalido"
+ 
     break    
 }
