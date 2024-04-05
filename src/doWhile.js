@@ -1,8 +1,4 @@
-var mensaje;
-mensaje = "Estoy leyendo el documnto whileSwitch.js"
-var elemento = document.querySelector('#header');
-elemento.innerHTML = mensaje
-
+document.querySelector('#header').innerHTML = "Estoy leyendo el documento doWhile"
 
 function suma() {
     var numero1 = prompt(" Ingrese numero 1")
@@ -29,9 +25,9 @@ function division() {
 }
 
 
+var finalizar = true
 
-var inicio = true
-while (inicio == true) {
+do {
 
     var respuesta = prompt("1. Suma\n2. Resta\n3. Multiplicacion\n4. Division\n5. Para salir")
     switch (parseInt(respuesta)) {
@@ -48,8 +44,9 @@ while (inicio == true) {
             division()
             break
         case 5:
-            inicio = false
+            finalizar = false//Se ambia el valor para que finalice.
             break
+
     }
 
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+} while (finalizar == true) // Termina cuando es diferente. 
